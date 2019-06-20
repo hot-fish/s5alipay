@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+    <link rel="shortcut icon" href="{% static 'app01/Imgs/BMW.ico' %}">
+    <title>商品购买页面</title>
+    <link rel="stylesheet" href="{% static 'app01/dist/css/bootstrap.css' %}">
+</head>
+<body>
+    <form action="/page1/" method="POST">
+        {% csrf_token %}
+{#        <table cellspacing="100px"  border="1">#}
+        <table cellspacing="100px">
+            <tr>
+            <td>
+                <input type="radio" name="choose goods" value="奶茶" id="goods_naicha"><label style="color: #007bff" for="goods_naicha"><img src="{% static 'app01/GoodsImgs/奶茶.jpg' %}" height="120" width="80" />奶茶  3元/杯</label></input>
+            </td>
+            <td>
+                <input type="radio" name="choose goods" value="拿铁"id="goods_natie"checked="checked"><label style="color: #34ce57" for="goods_natie"><img src="{% static 'app01/GoodsImgs/拿铁.jpg' %}" height="120" width="80" />拿铁  12元/杯</label></input>
+            </td>
+            <td>
+                <input type="radio" name="choose goods" value="咖啡" id="goods_kafei"><label style="color: #6f42c1" for="goods_kafei"><img src="{% static 'app01/GoodsImgs/咖啡.jpg' %}" height="120" width="80" />咖啡  9.8元/杯</label></input>
+            </td>
+            <td>
+                <input type="radio" name="choose goods" value="意式" id="goods_yishi"><label style="color: #c69500" for="goods_yishi"><img src="{% static 'app01/GoodsImgs/意式.jpg' %}" height="120" width="80" />意式  12元/杯</label></input>
+            </td>
+            </tr>
+        <tr>
+        <td>
+            <input type="radio" name="choose goods" value="美式" id="goods_meishi"><label style="color: #007bff" for="goods_meishi"><img src="{% static 'app01/GoodsImgs/美式.jpg' %}" height="120" width="100" />美式  12元/杯</label></input>
+        </td>
+        <td>
+            <input type="radio" name="choose goods" value="卡布奇诺" id="goods_kabuqinuo"><label style="color: #34ce57" for="goods_kabuqinuo"><img src="{% static 'app01/GoodsImgs/卡布奇诺.jpg' %}" height="120" width="100" />卡布奇诺 10元/杯</label></input>
+        </td>
+       <td>
+            <input type="radio" name="choose goods" value="热巧克力" id="goods_reqiaokeli"><label style="color: #6f42c1" for="goods_reqiaokeli"><img src="{% static 'app01/GoodsImgs/热巧克力.jpg' %}" height="120" width="100" />热巧克力 9.8元/杯</label></input>
+       </td>
+        <td>
+            <input type="radio" name="choose goods" value="抹茶" id="goods_mocha"><label style="color: #c69500"" for="goods_mocha"><img src="{% static 'app01/GoodsImgs/抹茶.jpg' %}" height="120" width="100" />抹茶  9.8元/杯</label></input>
+        </td>
+        </tr>
+        <td>
+            <input type="radio" name="choose goods" value="牛奶巧克力" id="goods_naqkl"><label style="color: #007bff" for="goods_naqkl"><img src="{% static 'app01/GoodsImgs/牛奶巧克力.jpg' %}" height="120" width="100" />牛奶巧克力  9.8元/杯</label></input>
+        </td>
+        <td>
+            <input type="radio" name="choose goods" value="鸳鸯奶茶" id="goods_yync"><label style="color: #34ce57" for="goods_yync"><img src="{% static 'app01/GoodsImgs/鸳鸯奶茶.jpg' %}" height="120" width="100" />鸳鸯奶茶  9.8元/杯</label></input>
+        </td>
+        <td>
+            <input type="radio" name="choose goods" value="热牛奶" id="goods_reniunai"><label style="color: #6f42c1" for="goods_reniunai"><img src="{% static 'app01/GoodsImgs/热牛奶.jpg' %}" height="120" width="100" />热牛奶  8.8元/杯</label></input>
+        </td>
+        <td>
+            <input type="radio" name="choose goods" value="双倍意式特浓" id="goods_sbystn"><label style="color: #c69500" for="goods_sbystn"><img src="{% static 'app01/GoodsImgs/双倍意式特浓.jpg' %}" height="120" width="100" />双倍意式特浓  12元/杯</label></input>
+        </td>
+        <tr>
+        <td>
+            <input type="radio" name="choose goods" value="热水" id="goods_reshui"><label style="color: #007bff" for="goods_reshui"><img src="{% static 'app01/GoodsImgs/热水.jpg' %}" height="120" width="100" />热水  1元/杯</label></input>
+        </td>
+        <td>
+            <input type="radio" name="choose goods" value="玛奇朵" id="goods_maqiduo"><label style="color: #34ce57" for="goods_maqiduo"><img src="{% static 'app01/GoodsImgs/玛奇朵.jpg' %}" height="120" width="100" />玛奇朵  12元/杯</label></input>
+        </td>
+        </tr>
+        </table>
+        <br>
+        <input type="submit" style="background: #007bff;color: #ffffff;text-align: center;width: 500px" value="去支付" />
+    </form>
+    <br>
+    <hr>
+    <form action="/page1_1/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="money" value="1.5">
+        <input type="submit" style="background: #007bff;color: #ffffff;text-align: center;width: 100px" value="自定义支付" />
+    </form>
+<script></script>
+</body>
+</html>
